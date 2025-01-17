@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Manipulation Example</title>
+</head>
+<body>
+  <h1 id="title">Original Title</h1>
+  <div class="content">
+    <p>This is the original content.</p>
+  </div>
+  <button id="myButton">Change Content</button>
+
+  <script>
+    // Select elements
+    const title = document.getElementById("title");
+    const content = document.querySelector(".content");
+    const button = document.getElementById("myButton");
+
+    // Change text and style
+    title.textContent = "Updated Title";
+    title.style.color = "green";
+
+    // Add event listener to button
+    button.addEventListener("click", () => {
+      // Create a new element
+      const newParagraph = document.createElement("p");
+      newParagraph.textContent = "This is added content!";
+      content.appendChild(newParagraph);
+
+      // Toggle the title's color on click
+      title.style.color = title.style.color === "green" ? "blue" : "green";
+    });
+  </script>
+</body>
+</html>

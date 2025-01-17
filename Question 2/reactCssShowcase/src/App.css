@@ -1,0 +1,31 @@
+/* Flexbox Section */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap; /* Items will wrap onto new lines */
+  justify-content: space-around; /* Space items evenly with space around them */
+  gap: 10px;
+  margin-bottom: 20px; /* Add some space between flex and grid sections */
+}
+
+.flex-item {
+  flex: 1 1 200px; /* Allow items to grow, shrink and have a base size of 200px */
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+/* Grid Section */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3 equal-width columns */
+  grid-template-rows: repeat(2, 150px); /* 2 rows with fixed height */
+  gap: 10px; /* Space between grid items */
+}
+
+.grid-item {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+}

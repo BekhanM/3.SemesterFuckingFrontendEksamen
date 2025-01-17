@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Delegation Example</title>
+</head>
+<body>
+
+    //If you dont want eventlisteners to be added to each child element, you can use event delegation
+  <div id="parent" style="padding: 50px; background-color: lightcoral;">
+    <button class="child">Button 1</button>
+    <button class="child">Button 2</button>
+    <button class="child">Button 3</button>
+  </div>
+
+  <script>
+    // Add event listener to the parent element
+    document.getElementById('parent').addEventListener('click', function(event) {
+      // Check if a child button was clicked
+      if (event.target && event.target.classList.contains('child')) {
+        alert(event.target.textContent + ' clicked');
+      }
+    });
+  </script>
+  
+</body>
+</html>
